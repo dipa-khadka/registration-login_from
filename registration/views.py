@@ -16,3 +16,8 @@ def register(request):
             
             # can create a "success" URL
             return redirect('success')
+    
+    else:
+        form = RegistrationForm()
+        return render(request, 'registration/register.html', {'form': form})
+        
